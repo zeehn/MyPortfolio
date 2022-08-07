@@ -1,24 +1,10 @@
-# README
+# Porfolio Project
+This is a portfolio project that I am in the process of building. It's built using Ruby on Rails. Sqlite database is used in 
+Development Environment but will be moved to PostgreSQL when deployed to production.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Installation
+```ruby
+git clone https://github.com/zeehn/MyPortfolio.git
+cd MyPortfolio
+bundle install 
+```
