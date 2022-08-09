@@ -17,6 +17,20 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit 
+    @project = Project.find(params[:id])
+  end
+  
+  def update 
+    @project = Project.find(params[:id])
+
+    if @project.update(project_params)
+      redirect_to @project, notice: 'Project successfully updated!'
+    else 
+      render :edit 
+    end
+  end
+
 private 
   def project_params 
     params.require(:project).permit(:title, :sub_title, :description, :main_image_file_name, :thumb_image_file_name)
