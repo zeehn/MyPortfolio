@@ -35,6 +35,12 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy 
+    @project = Project.find(params[:id])
+    @project.destroy 
+    redirect_to projects_path 
+  end
+
 private 
   def project_params 
     params.require(:project).permit(:title, :sub_title, :description, :main_image_file_name, :thumb_image_file_name)
