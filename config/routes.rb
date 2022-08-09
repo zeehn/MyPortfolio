@@ -4,5 +4,10 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   resources :projects
-  resources :blogs 
+  resources :blogs do 
+    member do 
+      post :toggle_status
+    end
+  end
+
 end

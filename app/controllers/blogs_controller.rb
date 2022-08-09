@@ -34,6 +34,17 @@ class BlogsController < ApplicationController
     end
   end
 
+  def toggle_status 
+    @blog = Blog.find(params[:id])
+    
+    if @blog.draft? 
+      @blog.published! 
+    else
+      @blog.draft! 
+    end 
+    redirect_to blogs_path, notice: 'Status updated!'
+  end
+
   def destroy 
     @blog = Blog.find(params[:id])
     @blog.destroy 
