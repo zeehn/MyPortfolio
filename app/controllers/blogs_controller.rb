@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController 
   def index 
     @blogs = Blog.all 
+    @page_title = "Zakir Hussain | Blog"
   end
 
   def new 
