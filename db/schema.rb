@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220811015536) do
+ActiveRecord::Schema.define(version: 20220811184421) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "status", default: 0
     t.integer "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["category_id"], name: "index_blogs_on_category_id"
   end
 
