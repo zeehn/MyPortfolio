@@ -16,6 +16,6 @@
     <%= auth_links %>
     <%= yield %>
 
-    <p>Thanks for visiting from <%= session[:source] if session[:source] %></p>
+    <%= source_helper %>
   </body>
 </html>
