@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220811002710) do
+ActiveRecord::Schema.define(version: 20220811005450) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 20220811002710) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "badge"
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string "name"
+    t.integer "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_technologies_on_project_id"
   end
 
 end

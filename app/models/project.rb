@@ -1,5 +1,7 @@
 class Project < ApplicationRecord
   include Placeholder
+  has_many :technologies, dependent: :destroy 
+  
   before_save :set_slug 
 
   validates :title, presence: true, uniqueness: true 

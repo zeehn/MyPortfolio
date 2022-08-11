@@ -45,3 +45,9 @@ end
 end
 
 puts "9 projects created"
+
+3.times do |tech|
+  Technology.create!(name: "Technology #{tech}", project: Project.last)
+end
+
+puts "3 Technologies created"
