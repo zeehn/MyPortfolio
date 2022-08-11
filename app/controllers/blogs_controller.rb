@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController 
+  access all: [:show, :index], user: {except: [:new, :create, :edit, :update, :destroy]}, admin: :all
   layout "blog"
   def index 
     @blogs = Blog.all 
@@ -14,6 +15,7 @@ class BlogsController < ApplicationController
     if @blog.save 
       redirect_to @blog, notice: "Blog Created Successfully"
     else
+      fail
       render :new 
     end 
   end 
