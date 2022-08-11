@@ -5,3 +5,4 @@ class ApplicationController < ActionController::Base
   include GuestUser
   include SetPageDefaults
 end
+
