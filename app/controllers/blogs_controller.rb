@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController 
+  layout "blog"
   def index 
     @blogs = Blog.all 
     @page_title = "Zakir Hussain | Blog"
