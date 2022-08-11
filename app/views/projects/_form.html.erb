@@ -19,6 +19,10 @@
     <%= f.label :thumb_image_file_name %>
     <%= f.file_field :thumb_image_file_name %>
   </div>
+
+  <div>
+    <%= f.collection_check_boxes(:technology_ids, Technology.all, :id, :name) %>
+  </div>
   <div>
     <%= f.submit %>
   </div>

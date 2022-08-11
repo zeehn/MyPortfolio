@@ -44,6 +44,6 @@ private
   end
 
   def project_params 
-    params.require(:project).permit(:title, :sub_title, :description, :main_image_file_name, :thumb_image_file_name)
+    params.require(:project).permit(:title, :sub_title, :description, :main_image_file_name, :thumb_image_file_name, technology_ids: [])
   end
 end
