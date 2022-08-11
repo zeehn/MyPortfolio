@@ -1,7 +1,14 @@
-<main role="main" class="inner cover text-center">
-  <h1 class="cover-heading">Cover your page.</h1>
-  <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-  <p class="lead">
-    <%= link_to "About Me", about_path, class: 'btn btn-lg btn-primary text-center' %>
-  </p>
-</main>
+<main role="main" class="inner cover">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h1 class="cover-heading">Hi, I'm Zakir</h1>
+      <p class="lead">I'm a Ruby on Rails Developer & Cloud Enthusiast. I love technology & building things with it. </p>
+      <p class="lead">
+        <%= link_to "About Me", about_path, class: 'btn btn-lg btn-primary text-center' %>
+      </p>
+    </div>
+    <div class="col-12 col-md-6">
+      <%= image_tag "placeholder.jpg", class: "img-fluid" %>
+    </div>
+  </div>
+</main> 
