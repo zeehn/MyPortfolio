@@ -1,13 +1,14 @@
-<h1>Hi, <%= current_user.first_name %></h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-
-<h3>Blog Posts</h3>
-<%= @posts.inspect %>
-
-<h3>Skills</h3>
-<%= @skills.inspect %>
-
-</hr>
-
-<%= session[:source] %>
+<main role="main" class="inner cover">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h1 class="cover-heading">Hi, I'm Zakir</h1>
+      <p class="lead">I'm a Ruby on Rails Developer & Cloud Enthusiast. I love technology & building things with it. </p>
+      <p class="lead">
+        <%= link_to "About Me", about_path, class: 'btn btn-lg btn-primary text-center' %>
+      </p>
+    </div>
+    <div class="col-12 col-md-6">
+      <%= image_tag "placeholder.jpg", class: "img-fluid" %>
+    </div>
+  </div>
+</main> 

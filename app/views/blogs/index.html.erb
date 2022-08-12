@@ -1,7 +1,6 @@
-<h2>All Blogs</h2>
+<div class="col-sm-8 blog-main">
+  <%= render @blogs %>
+  <%= paginate @blogs %>
 
-<ul>
-  <% @blogs.each do |blog| %>
-    <li><%= link_to blog.title, blog %> <%= link_to "Edit", edit_blog_path(blog) %> <%= link_to "Delete", blog, method: :delete %> <%= button_to blog.status, toggle_status_blog_path(blog) %></li>
-  <% end %>
-</ul>
+</div>
+<%= render "shared/blog_sidebar" %>

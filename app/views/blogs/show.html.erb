@@ -1,3 +1,4 @@
-<h3><%= @blog.title %></h3>
-<p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p>
-<p><%= @blog.body %></p>
+<div class="col-sm-8 blog-main">
+  <%= render "blog", blog: @blog %>
+</div>
+<%= render "shared/blog_sidebar" %>

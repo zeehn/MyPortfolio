@@ -2,7 +2,8 @@
 <html>
   <head>
     <title><%= @page_title %></title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <meta name="keywords" content=<%= @seo_keywords %>>
     <%= stylesheet_link_tag    'projects', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,12 +11,14 @@
   </head>
 
   <body>
-    <%= render 'shared/nav', location: 'top' %>
-    <p class="notice"><%= notice %></p>                                                                                     
-    <p class="alert"><%= alert %></p> 
-    <%= auth_links %>
-    <%= yield %>
+    <%= render "shared/projects_header" %>
+
+    <main role="main">
+      <%= yield %>
+    </main>
 
     <%= source_helper %>
+    <%= render "shared/projects_footer" %>
   </body>
 </html>
+
