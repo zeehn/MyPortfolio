@@ -1,7 +1,7 @@
-<h2>All Blogs</h2>
-
-<ul>
-  <% @blogs.each do |blog| %>
-    <li><%= link_to blog.title, blog %> <%= link_to "Edit", edit_blog_path(blog) %> <%= link_to "Delete", blog, method: :delete %> <%= button_to blog.status, toggle_status_blog_path(blog) %></li>
-  <% end %>
-</ul>
+<div class="col-sm-8 blog-main">
+  <%= render @blogs %>
+  <nav class="blog-pagination">
+    <a href="#" class="btn btn-outline-primary">Previous</a>
+    <a href="#" class="btn btn-outline-secondary disabled">Next</a>
+  </nav>
+</div>
