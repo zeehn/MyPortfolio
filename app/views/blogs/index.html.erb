@@ -1,8 +1,6 @@
 <div class="col-sm-8 blog-main">
   <%= render @blogs %>
-  <nav class="blog-pagination">
-    <a href="#" class="btn btn-outline-primary">Previous</a>
-    <a href="#" class="btn btn-outline-secondary disabled">Next</a>
-  </nav>
+  <%= paginate @blogs %>
+
 </div>
 <%= render "shared/blog_sidebar" %>
